@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -7,6 +7,19 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'first-angular-app';
+export class AppComponent implements OnInit{
+  title = 'standalone';
+
+  constructor(){
+    console.log('constructor');
+  }
+
+  ngOnInit(){
+    console.log('ngoninit');
+    // this.changeTitle();
+  }
+
+  changeTitle(){
+    this.title='still a standalone'
+  }
 }

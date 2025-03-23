@@ -8,7 +8,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit{
-  title = 'standalone';
+  title = 'first-app-standalone';
 
   constructor(){
     console.log('constructor');
